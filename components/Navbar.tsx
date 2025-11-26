@@ -36,49 +36,50 @@ export default function Navbar({ transparent = false }) {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${activeStyle}`}
     >
-      <div className="container max-w-full mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container max-w-full mx-auto px-8 py-4 flex justify-between items-center">
         
         {/* === LOGO & TEXT === */}
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/logo_lpi.jpg"
-            alt="Logo"
-            width={60}
-            height={60}
-            className="object-contain"
-          />
-          <span className="font-bold text-xl tracking-wide">
-            <strong>Baitunnaim</strong>
-          </span>
-        </Link>
+        <Image
+          src="/logo_lpi.jpg"
+          alt="Logo"
+          width={60}
+          height={60}
+          className="object-contain"
+        />
+        <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl leading-tight">
+          Baitun Na'im Full Day School
+        </span>
+      </Link>
+
 
         {/* === DESKTOP MENU === */}
-        <div className="hidden md:flex space-x-6 font-medium items-center px-4">
-          <Link href="/accommodation" className="hover:opacity-70 transition">
+        <div className="hidden md:flex space-x-6 font-bold items-center text-md px-4 text-teal-800 tracking-wide">
+          <Link href="/" className="hover:opacity-70 transition">
             Home
           </Link>
-          <Link href="/" className="hover:opacity-70 transition">
+          <Link href="/lpi" className="hover:opacity-70 transition">
             LPI
           </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
+          <Link href="/tpa" className="hover:opacity-70 transition">
             TPA
           </Link>
-          <Link href="/accommodation" className="hover:opacity-70 transition">
+          <Link href="/kb" className="hover:opacity-70 transition">
             KB
           </Link>
-          <Link href="/about" className="hover:opacity-70 transition">
+          <Link href="/tk" className="hover:opacity-70 transition">
             TK
           </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
+          <Link href="/mi" className="hover:opacity-70 transition">
             MI
           </Link>
-          <Link href="/accommodation" className="hover:opacity-70 transition">
+          <Link href="/publikasi" className="hover:opacity-70 transition">
             PUBLIKASI
           </Link>
-          <Link href="/about" className="hover:opacity-70 transition">
+          <Link href="/contact" className="hover:opacity-70 transition">
             HUBUNGI KAMI
           </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
+          <Link href="/spmb" className="hover:opacity-70 transition">
             SPMB
           </Link>          
         </div>

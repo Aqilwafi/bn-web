@@ -5,68 +5,68 @@ export default function ContactContent() {
         
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
-          Contact Us
+          Hubungi Kami
         </h1>
         <p className="text-center text-gray-600 mb-12">
-          Have questions or need help? Reach out to us and we’ll get back to you as soon as possible.
+          Punya pertanyaan atau membutuhkan bantuan? Silakan hubungi kami, kami akan merespon secepat mungkin.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-800">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold text-gray-800">Informasi Kontak</h2>
 
             <div>
-              <p className="font-medium text-gray-700">📍 Address:</p>
-              <p className="text-gray-600">123 Guesthouse Street, Cape Town, South Africa</p>
+              <p className="font-medium text-gray-700">📍 Alamat:</p>
+              <p className="text-gray-600">Jl. Contoh No. 123, Kota Jakarta, Indonesia</p>
             </div>
 
             <div>
-              <p className="font-medium text-gray-700">📞 Phone:</p>
-              <p className="text-gray-600">+27 123 456 789</p>
+              <p className="font-medium text-gray-700">📞 Telepon:</p>
+              <p className="text-gray-600">+62 812 3456 7890</p>
             </div>
 
             <div>
               <p className="font-medium text-gray-700">📧 Email:</p>
-              <p className="text-gray-600">support@dguesthl.com</p>
+              <p className="text-gray-600">info@contohwebsite.com</p>
             </div>
 
             <div>
-              <p className="font-medium text-gray-700">⏰ Business Hours:</p>
-              <p className="text-gray-600">Mon – Fri: 09:00 – 17:00</p>
-              <p className="text-gray-600">Sat – Sun: Closed</p>
+              <p className="font-medium text-gray-700">⏰ Jam Operasional:</p>
+              <p className="text-gray-600">Senin - Jumat: 08.00 - 16.00</p>
+              <p className="text-gray-600">Sabtu & Minggu: Tutup</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Send us a Message</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">Kirim Pesan</h2>
 
             <form className="space-y-4">
               <div>
-                <label className="block mb-1 font-medium">Your Name</label>
+                <label className="block mb-1 font-medium">Nama Lengkap</label>
                 <input
                   type="text"
                   className="w-full border rounded px-3 py-2 focus:outline-blue-500"
-                  placeholder="Enter your name"
+                  placeholder="Masukkan nama lengkap Anda"
                 />
               </div>
 
               <div>
-                <label className="block mb-1 font-medium">Email Address</label>
+                <label className="block mb-1 font-medium">Alamat Email</label>
                 <input
                   type="email"
                   className="w-full border rounded px-3 py-2 focus:outline-blue-500"
-                  placeholder="you@example.com"
+                  placeholder="nama@email.com"
                 />
               </div>
 
               <div>
-                <label className="block mb-1 font-medium">Message</label>
+                <label className="block mb-1 font-medium">Pesan</label>
                 <textarea
                   className="w-full border rounded px-3 py-2 h-28 focus:outline-blue-500"
-                  placeholder="Write your message..."
+                  placeholder="Tuliskan pesan Anda di sini..."
                 />
               </div>
 
@@ -74,7 +74,7 @@ export default function ContactContent() {
                 type="button"
                 className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
               >
-                Send Message
+                Kirim Pesan
               </button>
             </form>
           </div>

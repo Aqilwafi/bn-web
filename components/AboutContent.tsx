@@ -1,63 +1,83 @@
 // components/AboutContent.tsx
 export default function AboutContent() {
-    return (
-        <section className="min-h-screen bg-gray-50 py-16 px-4 text-black">
-        <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
-            <h1 className="text-4xl font-bold text-gray-800">About Us - Guest House Yayasan Harmoni</h1>
+  return (
+    <section className="min-h-screen bg-gray-50 py-16 px-4 text-black">
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
-            <p className="text-gray-700 leading-relaxed">
-                Selamat datang di <strong>Guest House Yayasan Harmoni</strong>, sebuah hunian singgah yang dirancang untuk memberikan kenyamanan, ketenangan, dan pelayanan terbaik bagi setiap tamu.
-                Dikelola langsung oleh Yayasan Harmoni, fasilitas ini dibangun sebagai bentuk dukungan bagi masyarakat yang membutuhkan tempat inap yang aman, bersih, dan terjangkau.
-            </p>
+        <h1 className="text-4xl font-bold text-gray-800">
+          Profil Yayasan LPI Baitunnaim
+        </h1>
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-gray-800">Visi Kami</h2>
-                <p className="text-gray-700 leading-relaxed">
-                    Menjadi hunian singgah terbaik yang mengutamakan kenyamanan, keramahan, serta kebermanfaatan bagi masyarakat yang membutuhkan fasilitas akomodasi berkualitas.
-                </p>
-            </section>
+        <p className="text-gray-700 leading-relaxed">
+          <strong>Yayasan LPI Baitunnaim</strong> adalah sebuah lembaga pendidikan Islam
+          yang berkomitmen dalam membentuk generasi berakhlak mulia, berilmu, dan
+          berdaya saing melalui sistem pendidikan yang terpadu antara nilai keislaman
+          dan ilmu pengetahuan modern.
+        </p>
 
-            <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-gray-800">Misi Kami</h2>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                    <li>Menyediakan fasilitas penginapan yang bersih, nyaman, dan terjaga.</li>
-                    <li>Membangun lingkungan yang aman dan ramah bagi tamu.</li>
-                    <li>Mendukung program sosial yayasan dengan menyediakan layanan berbasis kemasyarakatan.</li>
-                    <li>Memberikan pengalaman menginap yang menyenangkan melalui pelayanan profesional dan penuh empati.</li>
-                </ul>
-            </section>
+        <p className="text-gray-700 leading-relaxed">
+          Yayasan ini hadir sebagai wadah pembinaan anak sejak usia dini hingga
+          pendidikan dasar, dengan mengedepankan pendidikan karakter, spiritualitas,
+          serta kecerdasan intelektual yang seimbang. Kami meyakini bahwa pendidikan
+          bukan hanya mengajarkan ilmu, tetapi juga membina kepribadian dan iman.
+        </p>
 
-
-            <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-gray-800">Fasilitas Guest House</h2>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                    <li>Kamar bersih dan ber-AC</li>
-                    <li>Kamar mandi dalam</li>
-                    <li>Akses Wi-Fi gratis</li>
-                    <li>Ruang tamu bersama</li>
-                    <li>Area parkir aman</li>
-                    <li>Pelayanan ramah dan responsif</li>
-                </ul>
-            </section>
-
-            <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-gray-800">Mengapa Memilih Kami?</h2>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                    <li>Lingkungan tenang dan nyaman</li>
-                    <li>Harga terjangkau</li>
-                    <li>Lokasi strategis</li>
-                    <li>Dikelola yayasan dengan profesionalitas dan kepedulian</li>
-                    <li>Cocok untuk tamu umum, keluarga, peserta kegiatan, maupun tamu internal yayasan</li>
-                </ul>
-            </section>
-
-            <section className="space-y-4 pb-10">
-                <h2 className="text-2xl font-semibold text-gray-800">Tentang Yayasan Harmoni</h2>
-                <p className="text-gray-700 leading-relaxed">
-                    Yayasan Harmoni adalah organisasi sosial yang berfokus pada pengembangan pendidikan, pemberdayaan masyarakat, dan kegiatan sosial lainnya. Guest House ini merupakan bagian dari inisiatif yayasan untuk menyediakan layanan bernilai sosial sekaligus mendukung berbagai program kemanusiaan.
-                </p>
-            </section>
-        </div>
+        {/* VISI */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Visi</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Menjadi lembaga pendidikan Islam unggulan dalam mencetak generasi yang
+            beriman, berilmu, berakhlak, dan berdaya saing di tingkat nasional maupun global.
+          </p>
         </section>
-    );
+
+        {/* MISI */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Misi</h2>
+          <ul className="list-disc pl-6 text-gray-700 space-y-1">
+            <li>Menyelenggarakan pendidikan Islam terpadu berbasis Al-Qur’an dan As-Sunnah.</li>
+            <li>Menanamkan nilai akhlakul karimah sejak usia dini.</li>
+            <li>Mengembangkan potensi akademik dan non-akademik peserta didik.</li>
+            <li>Mendorong terciptanya lingkungan belajar yang aman, islami, dan kondusif.</li>
+            <li>Membina tenaga pendidik yang profesional, berdedikasi, dan berintegritas.</li>
+            <li>Mengintegrasikan teknologi dalam proses pembelajaran.</li>
+          </ul>
+        </section>
+
+        {/* UNIT PENDIDIKAN */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Unit Pendidikan</h2>
+          <ul className="list-disc pl-6 text-gray-700 space-y-1">
+            <li><strong>Kelompok Bermain (KB)</strong> - Pendidikan usia dini berbasis pembentukan karakter dan adab.</li>
+            <li><strong>Taman Kanak-Kanak (TK)</strong> - Penguatan dasar akademik, sosial, dan spiritual anak.</li>
+            <li><strong>Madrasah Ibtidaiyah (MI)</strong> - Pendidikan dasar ilmiah dan keislaman terpadu.</li>
+          </ul>
+        </section>
+
+        {/* NILAI UNGGUL */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Nilai-Nilai Unggulan</h2>
+          <ul className="list-disc pl-6 text-gray-700 space-y-1">
+            <li>Keislaman dan Akhlak Mulia</li>
+            <li>Kedisiplinan dan Tanggung Jawab</li>
+            <li>Kemandirian dan Kreativitas</li>
+            <li>Keunggulan Akademik</li>
+            <li>Kepedulian Sosial</li>
+          </ul>
+        </section>
+
+        {/* TENTANG YAYASAN */}
+        <section className="space-y-4 pb-10">
+          <h2 className="text-2xl font-semibold text-gray-800">Tentang Yayasan</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Yayasan LPI Baitunnaim tidak hanya berperan sebagai lembaga pendidikan,
+            tetapi juga sebagai pusat dakwah dan pembinaan umat. Kami berkomitmen untuk
+            menciptakan lingkungan pendidikan yang menumbuhkan nilai-nilai Islam serta
+            membangun karakter generasi penerus bangsa yang berkualitas.
+          </p>
+        </section>
+
+      </div>
+    </section>
+  );
 }

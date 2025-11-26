@@ -5,7 +5,7 @@ export default function Footer() {
         <p>© {new Date().getFullYear()} Baitunnaim. All rights reserved.</p>
         <div className="mt-4 space-x-4">
           <a href="/about" className="hover:text-white">TENTANG KAMI</a>
-          <a href="/contact" className="hover:text-white">TERMS & POLICY</a>
+          <a href="/terms" className="hover:text-white">TERMS & POLICY</a>
         </div>
       </div>
     </footer>
