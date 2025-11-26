@@ -1,14 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AboutContent from "@/components/AboutContent";
+import PublikasiComponent from "@/components/PublikasiContent";
 
 
-export default function AboutPage() {
+export default function PublikasiPage() {
     return (
         <div className="flex flex-col min-h-screen text-black bg-white">
             <Navbar />
             <main className="flex-1 pt-22">
-                <AboutContent />
+                <PublikasiComponent />
             </main>
             <Footer />
         </div>

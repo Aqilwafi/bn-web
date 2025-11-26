@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen text-black">
       <Navbar  />
-      <main className="flex-1 pt-22">
+      <main className="flex-1 pt-22 pt-22">
         <Hero2 />
         <KataMereka />
           <Kerjasama/>
