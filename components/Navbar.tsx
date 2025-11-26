@@ -9,10 +9,6 @@ export default function Navbar({ transparent = false }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // === STATE LOGIN DUMMY === //
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
-  // ubah jadi true untuk testing
-
   // === SCROLL LISTENER === //
   useEffect(() => {
     if (!transparent) return;
@@ -32,56 +28,37 @@ export default function Navbar({ transparent = false }) {
       : "bg-transparent text-white"
     : "bg-white shadow-md text-black";
 
+  const linkClass = "hover:text-teal-600 transition-colors duration-200 font-semibold";
+
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${activeStyle}`}
-    >
-      <div className="container max-w-full mx-auto px-8 py-4 flex justify-between items-center">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${activeStyle}`}>
+      <div className="container max-w-full mx-auto px-6 md:px-12 py-3 md:py-4 flex justify-between items-center">
         
         {/* === LOGO & TEXT === */}
         <Link href="/" className="flex items-center gap-3">
-        <Image
-          src="/logo_lpi.jpg"
-          alt="Logo"
-          width={60}
-          height={60}
-          className="object-contain"
-        />
-        <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl leading-tight">
-          Baitun Na'im Full Day School
-        </span>
-      </Link>
-
+          <Image
+            src="/logo_lpi.jpg"
+            alt="Logo"
+            width={60}
+            height={60}
+            className="object-contain"
+          />
+          <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl leading-tight">
+            Baitun Na'im Full Day School
+          </span>
+        </Link>
 
         {/* === DESKTOP MENU === */}
-        <div className="hidden md:flex space-x-6 font-bold items-center text-md px-4 text-teal-800 tracking-wide">
-          <Link href="/" className="hover:opacity-70 transition">
-            Home
-          </Link>
-          <Link href="/lpi" className="hover:opacity-70 transition">
-            LPI
-          </Link>
-          <Link href="/tpa" className="hover:opacity-70 transition">
-            TPA
-          </Link>
-          <Link href="/kb" className="hover:opacity-70 transition">
-            KB
-          </Link>
-          <Link href="/tk" className="hover:opacity-70 transition">
-            TK
-          </Link>
-          <Link href="/mi" className="hover:opacity-70 transition">
-            MI
-          </Link>
-          <Link href="/publikasi" className="hover:opacity-70 transition">
-            PUBLIKASI
-          </Link>
-          <Link href="/contact" className="hover:opacity-70 transition">
-            HUBUNGI KAMI
-          </Link>
-          <Link href="/spmb" className="hover:opacity-70 transition">
-            SPMB
-          </Link>          
+        <div className="hidden md:flex space-x-6 items-center text-md tracking-wide">
+          <Link href="/" className={linkClass}>Home</Link>
+          <Link href="/lpi" className={linkClass}>LPI</Link>
+          <Link href="/tpa" className={linkClass}>TPA</Link>
+          <Link href="/kb" className={linkClass}>KB</Link>
+          <Link href="/tk" className={linkClass}>TK</Link>
+          <Link href="/mi" className={linkClass}>MI</Link>
+          <Link href="/publikasi" className={linkClass}>Publikasi</Link>
+          <Link href="/contact" className={linkClass}>Hubungi Kami</Link>
+          <Link href="/spmb" className={linkClass}>SPMB</Link>
         </div>
 
         {/* === MOBILE MENU TOGGLE === */}
@@ -93,36 +70,21 @@ export default function Navbar({ transparent = false }) {
       {/* === MOBILE MENU === */}
       {open && (
         <div
-          className={`md:hidden px-4 pb-4 space-y-3 transition-all duration-300
-            ${
-              scrolled || !transparent
-                ? "bg-white text-black shadow-md"
-                : "bg-black/70 text-white backdrop-blur-sm py-4"
-            }
-          `}
+          className={`md:hidden px-6 py-4 space-y-3 transition-all duration-300
+            ${scrolled || !transparent
+              ? "bg-white text-black shadow-md"
+              : "bg-black/70 text-white backdrop-blur-sm py-4"
+            }`}
         >
-          <Link href="/accommodation" onClick={() => setOpen(false)} className="block">
-            LPI
-          </Link>
-          <Link href="/about" onClick={() => setOpen(false)} className="block">
-            KB
-          </Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="block">
-            TK
-          </Link>
-           <Link href="/accommodation" onClick={() => setOpen(false)} className="block">
-            MI
-          </Link>
-          <Link href="/about" onClick={() => setOpen(false)} className="block">
-            PUBLIKASI
-          </Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="block">
-            HUBUNGI KAMI
-          </Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="block">
-            SPMB
-          </Link>
-
+          <Link href="/" onClick={() => setOpen(false)} className={linkClass + " block"}>Home</Link>
+          <Link href="/lpi" onClick={() => setOpen(false)} className={linkClass + " block"}>LPI</Link>
+          <Link href="/tpa" onClick={() => setOpen(false)} className={linkClass + " block"}>TPA</Link>
+          <Link href="/kb" onClick={() => setOpen(false)} className={linkClass + " block"}>KB</Link>
+          <Link href="/tk" onClick={() => setOpen(false)} className={linkClass + " block"}>TK</Link>
+          <Link href="/mi" onClick={() => setOpen(false)} className={linkClass + " block"}>MI</Link>
+          <Link href="/publikasi" onClick={() => setOpen(false)} className={linkClass + " block"}>Publikasi</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className={linkClass + " block"}>Hubungi Kami</Link>
+          <Link href="/spmb" onClick={() => setOpen(false)} className={linkClass + " block"}>SPMB</Link>
         </div>
       )}
     </nav>

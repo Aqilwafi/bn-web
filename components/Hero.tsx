@@ -8,7 +8,7 @@ const images = [
   "/images/FLYR-BAITUNNAIM-03.jpg"
 ];
 
-export default function Hero() {
+export default function Hero2() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative w-full aspect-[3/1] max-h-screen overflow-hidden">
 
       {/* Slide wrapper */}
       <div className="absolute inset-0">
@@ -35,37 +35,6 @@ export default function Hero() {
           />
         ))}
       </div>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
-
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg leading-tight">
-          Find Trusted Guesthouses Across South Jakarta
-        </h1>
-
-        <p className="text-base sm:text-lg md:text-xl mb-8 drop-shadow-lg max-w-2xl">
-          Discover and book guesthouses with confidence. Join D'Guest of H to list your property.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-          <a
-            href="guesthouse"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm sm:text-base"
-          >
-            Search Guesthouses
-          </a>
-
-          <a
-            href="/login"
-            className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-100 transition text-sm sm:text-base"
-          >
-            Join Now
-          </a>
-        </div>
-      </div>
-
     </section>
   );
 }
