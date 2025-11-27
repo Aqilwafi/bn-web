@@ -22,7 +22,7 @@ export default function Navbar2() {
 
   return (
     <nav className="bg-white border border-yellow-100 py-3 px-6 shadow-sm">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container max-w-full mx-auto px-6 md:px-12 py-3 md:py-4 flex justify-between items-center">
         {/* Logo & text kiri */}
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -38,7 +38,7 @@ export default function Navbar2() {
         </Link>
 
         {/* Links kanan */}
-        <div className="hidden md:flex space-x-6 text-teal-800 font-medium">
+        <div className="hidden md:flex text-teal-800 font-medium">
           {links.map((link) => (
             <button
               key={link}

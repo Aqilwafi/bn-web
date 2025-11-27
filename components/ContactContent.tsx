@@ -1,6 +1,6 @@
 export default function ContactContent() {
   return (
-    <section className="min-h-screen bg-gray-50 py-16 px-4 text-black">
+    <section className="min-h-screen bg-gray-50 px-4 text-black">
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
         
         {/* Header */}
@@ -19,17 +19,18 @@ export default function ContactContent() {
 
             <div>
               <p className="font-medium text-gray-700">📍 Alamat:</p>
-              <p className="text-gray-600">Jl. Contoh No. 123, Kota Jakarta, Indonesia</p>
+              <p className="text-gray-600">Jl. Raya Lumba Lumba, Ngadri, Kec. Binangun, Kabupaten Blitar, Jawa Timur 66193
+</p>
             </div>
 
             <div>
               <p className="font-medium text-gray-700">📞 Telepon:</p>
-              <p className="text-gray-600">+62 812 3456 7890</p>
+              <p className="text-gray-600">+62 813-6496-6677</p>
             </div>
 
             <div>
               <p className="font-medium text-gray-700">📧 Email:</p>
-              <p className="text-gray-600">info@contohwebsite.com</p>
+              <p className="text-gray-600">baitunnaimislamic@gmail.com</p>
             </div>
 
             <div>

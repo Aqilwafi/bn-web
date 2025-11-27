@@ -10,7 +10,7 @@ export const testimonials: Testimonial[] = [
     name: "",
     title: "",
     description:
-      "LPI Sabilillah menunjukkan komitmen kuat dalam membangun karakter generasi muda yang berakhlak, berilmu, dan berwawasan kebangsaan.",
+      "LPI Baitun Na'im menunjukkan komitmen kuat dalam membangun karakter generasi muda yang berakhlak, berilmu, dan berwawasan kebangsaan.",
     imageUrl: "./logo_lpi.png",
   },
   {

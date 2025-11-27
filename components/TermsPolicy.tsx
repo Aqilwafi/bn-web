@@ -1,8 +1,8 @@
 // components/TermsPolicy.tsx
 export default function TermsPolicy() {
   return (
-    <section className="min-h-screen bg-gray-50 py-16 px-4 text-black">
-      <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
+    <section className="min-h-screen bg-gray-50 px-4 text-black">
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-8 text-justify">
 
         <h1 className="text-4xl font-bold text-gray-800">
           Syarat & Ketentuan dan Kebijakan Privasi
