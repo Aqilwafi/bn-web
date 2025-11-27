@@ -40,8 +40,8 @@ export default function Navbar() {
   const isActive = (href?: string) => href && pathname === href;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md text-black border border-yellow-100 p-4">
-      <div className="container max-w-full mx-auto flex justify-between items-center">
+    <nav className="fixed top-0 max-w-full z-50 bg-white shadow-md text-black border border-yellow-100 p-4">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo & text */}
         <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
