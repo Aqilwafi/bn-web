@@ -7,13 +7,13 @@ export default function Hero2() {
     <section className="py-10 bg-white overflow-hidden">
       <div className="container mx-auto px-2 text-center">
         {/* JUDUL */}
-        <h2 className="text-2xl md:text-5xl font-bold text-teal-800 mb-4">
+        <h2 className="text-2xl md:text-5xl font-bold text-teal-800 mb-1">
           Welcome to
         </h2>
         <h2 className="text-2xl md:text-4xl font-bold text-teal-800 mb-1">
           <strong>BAITUN NA'IM ISLAMIC FULL DAY SCHOOL</strong>
         </h2>
-        <h3 className="text-md md:text-xl font-medium text-gray-400 mb-4">
+        <h3 className="text-md md:text-xl font-medium text-gray-400 mb-6">
           Sekolah Hebat untuk Semua dan Setiap Anak
         </h3>
         
