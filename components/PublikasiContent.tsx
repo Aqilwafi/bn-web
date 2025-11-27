@@ -20,7 +20,7 @@ export default function PublikasiComponent() {
     }, [q]);
 
   return (
-    <section className="py-16 bg-gray-50 text-black">
+    <section className="py-5 bg-gray-50 text-black">
       <div className="max-w-7xl mx-auto px-4">
 
         <h2 className="text-4xl font-bold text-center text-teal-800 mb-4">

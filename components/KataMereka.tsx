@@ -38,7 +38,7 @@ export default function KataMereka() {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto text-center">
 
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-green-800">
           Kata Mereka

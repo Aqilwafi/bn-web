@@ -51,7 +51,7 @@ export default function Navbar() {
             height={50}
             className="object-contain"
           />
-          <span className="font-bold tracking-wide text-sm sm:text-base md:text-lg lg:text-xl leading-tight">
+          <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl text-teal-800">
             Baitun Na'im Full Day School
           </span>
         </Link>

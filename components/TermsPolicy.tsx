@@ -2,7 +2,7 @@
 export default function TermsPolicy() {
   return (
     <section className="min-h-screen bg-gray-50 px-4 text-black">
-      <div className="max-w-4xl mx-auto px-6 py-12 space-y-8 text-justify">
+      <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
         <h1 className="text-4xl font-bold text-gray-800">
           Syarat & Ketentuan dan Kebijakan Privasi
@@ -16,7 +16,7 @@ export default function TermsPolicy() {
         </p>
 
         {/* SYARAT & KETENTUAN */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Syarat & Ketentuan</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-1">
             <li>Pengguna wajib menggunakan layanan secara bertanggung jawab dan sesuai dengan hukum.</li>
@@ -28,7 +28,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* KEBIJAKAN PRIVASI */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Kebijakan Privasi</h2>
           <p className="text-gray-700 leading-relaxed">
             Kami menjaga privasi seluruh pengguna dengan sungguh-sungguh. Informasi yang
@@ -38,7 +38,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* DATA YANG DIKUMPULKAN */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Data yang Kami Kumpulkan</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-1">
             <li>Nama lengkap</li>
@@ -49,7 +49,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* PENGGUNAAN DATA */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Penggunaan Data</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-1">
             <li>Administrasi pendaftaran siswa</li>
@@ -60,7 +60,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* KEAMANAN DATA */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Keamanan Data</h2>
           <p className="text-gray-700 leading-relaxed">
             Kami menerapkan langkah-langkah pengamanan yang wajar untuk melindungi data
@@ -70,7 +70,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* PERUBAHAN KEBIJAKAN */}
-        <section className="space-y-4">
+        <section className="space-y-4 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Perubahan Kebijakan</h2>
           <p className="text-gray-700 leading-relaxed">
             Yayasan berhak mengubah isi kebijakan ini kapan saja sesuai kebutuhan.
@@ -79,7 +79,7 @@ export default function TermsPolicy() {
         </section>
 
         {/* KONTAK */}
-        <section className="space-y-4 pb-10">
+        <section className="space-y-4 pb-10 text-justify">
           <h2 className="text-2xl font-semibold text-gray-800">Kontak Kami</h2>
           <p className="text-gray-700 leading-relaxed">
             Jika Anda memiliki pertanyaan terkait kebijakan ini, silakan hubungi kami

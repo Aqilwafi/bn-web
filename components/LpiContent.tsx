@@ -4,7 +4,7 @@ export default function LpiContent() {
     <section className="min-h-screen bg-gray-50 px-4 text-black">
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-8">
 
-        <h1 className="text-4xl font-bold text-gray-800">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800">
             Profil Yayasan LPI Baitunnaim
         </h1>
 

@@ -43,7 +43,7 @@ const socials = [
 export default function SocialMedia() {
   return (
     <section className="py-10 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto text-center">
 
         {/* JUDUL */}
         <h2 className="text-4xl md:text-5xl font-bold text-teal-800 mb-4">
