@@ -19,7 +19,7 @@ export default function Hero2() {
         
         <Link
           href="/lpi"
-          className="block bg-gray-100 p-6 shadow-md hover:shadow-lg transition
+          className="block bg-gray-50 p-6 shadow-md hover:shadow-lg transition
                     flex flex-col justify-between h-full"
         >
           <div>
