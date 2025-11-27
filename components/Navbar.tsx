@@ -37,7 +37,7 @@ export default function Navbar({ transparent = false }) {
       {/* === LOGO & TEXT === */}
       <Link href="/" className="flex items-center gap-3">
         <Image
-          src="/logo_lpi.jpg"
+          src="/logo_lpi.png"
           alt="Logo"
           width={60}
           height={60}

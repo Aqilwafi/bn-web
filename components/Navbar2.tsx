@@ -26,7 +26,7 @@ export default function Navbar2() {
         {/* Logo & text kiri */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo_lpi.jpg"
+            src="/logo_lpi.png"
             alt="Logo"
             width={50}
             height={50}

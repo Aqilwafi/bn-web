@@ -88,7 +88,7 @@ export default function BlogCard({
         className="block bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition col-span-1 md:col-span-2"
       >
         <Image
-          src={gambar || "/logo_lpi.jpg"}
+          src={gambar || "/logo_lpi.png"}
           alt={judul}
           width={800}
           height={400}
