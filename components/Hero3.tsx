@@ -4,22 +4,22 @@ export default function Hero3() {
   const stats = [
     {
       icon: <User size={48} />,
-      number: 321,
+      number: 32,
       label: "Pendidik & Tenaga Kependidikan",
     },
     {
       icon: <GraduationCap size={48} />,
-      number: 2169,
+      number: 201,
       label: "Peserta Didik",
     },
     {
       icon: <GraduationCap size={48} />,
-      number: 12624,
+      number: 450,
       label: "Alumni",
     },
     {
       icon: <ClipboardList size={48} />,
-      number: 18123,
+      number: 43,
       label: "Pendaftar Calon Peserta Didik",
     },
   ];
