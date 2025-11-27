@@ -42,7 +42,7 @@ const socials = [
 
 export default function SocialMedia() {
   return (
-    <section className="py-10 bg-white overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto text-center">
 
         {/* JUDUL */}
@@ -54,7 +54,7 @@ export default function SocialMedia() {
         <div className="w-180 h-0.5 bg-teal-600 mx-auto mb-10"></div>
 
         {/* LOGO LIST */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 p-2">
 
           {socials.map((item, index) => (
             <a

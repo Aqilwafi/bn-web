@@ -13,6 +13,7 @@ Kegiatan ini bertujuan menumbuhkan semangat emansipasi dan kreativitas siswa. Le
 
 Peringatan Hari Kartini kali ini tidak hanya seru, tetapi juga memberi ruang bagi siswa untuk berkembang, mengasah bakat, dan mengenal tokoh inspiratif bangsa.
 
+
 #HariKartini2025  
 #MIAlMaarifNgadri  
 #KartiniMasaKini  
@@ -40,6 +41,7 @@ Peringatan Hari Kartini kali ini tidak hanya seru, tetapi juga memberi ruang bag
 Dengan penuh semangat dan tawa, anak-anak belajar menjaga kebersihan mulut sejak dini. Kegiatan ini dikemas secara menarik dan interaktif, lengkap dengan peragaan dan praktik langsung bersama para petugas kesehatan.
 
 Terima kasih Puskesmas Binangun atas kunjungannya! Semoga ilmu yang dibagikan hari ini bermanfaat dan menjadi bekal bagi anak-anak kami untuk tumbuh sehat dan ceria dengan senyum yang menawan 😊✨
+
 
 #PAUDPlusBaitunNaim  
 #SenyumSehatAnakHebat  
@@ -75,10 +77,12 @@ Seluruh siswa-siswi dengan antusias mengisi stand mereka dengan berbagai barang 
 
 Kegiatan ini bukan hanya sekadar ajang jual beli, tetapi juga menjadi sarana bagi siswa-siswi untuk belajar mengenai pentingnya bekerja keras, berkolaborasi, dan mengembangkan jiwa kepemimpinan.
 
+
 Follow kami di media sosial untuk update terbaru:  
 Instagram: @mi_almaarif.ngadri @paud_baitunnaim  
 TikTok: @baitunnaim_official  
 YouTube: @baitunnaim_official  
+
 
 Hubungi Kami untuk informasi lebih lanjut:  
 📞 Nomor HP/WA: 081364966677`,
@@ -105,10 +109,12 @@ Acara ini melibatkan seluruh elemen siswa-siswi dan guru dengan kegiatan seperti
 
 Semangat yang terbangun dalam acara ini diharapkan dapat terus menggugah para siswa-siswi untuk terus belajar, berinovasi, dan menjaga semangat kebersamaan dalam menjalani proses pendidikan.
 
+
 Follow kami di media sosial untuk update terbaru:  
 Instagram: @mi_almaarif.ngadri @paud_baitunnaim  
 TikTok: @baitunnaim_official  
 YouTube: @baitunnaim_official  
+
 
 Hubungi Kami untuk informasi lebih lanjut:  
 📞 Nomor HP/WA: 081364966677`,
@@ -135,6 +141,7 @@ Hubungi Kami untuk informasi lebih lanjut:
 Kegiatan ini menjadi bagian penting dalam mengevaluasi capaian belajar selama enam tahun terakhir. Para siswa mengikuti asesmen dengan semangat dan persiapan matang, didampingi guru-guru yang terus memberikan motivasi.
 
 Semoga seluruh proses berjalan lancar dan hasilnya menjadi bekal terbaik menuju jenjang selanjutnya.
+
 
 #ASAJ2025  
 #MIAlMaarifNgadri  
@@ -165,6 +172,7 @@ Anak-anak terlihat antusias dan senang bertemu teman-teman serta guru-guru merek
 Anak-anak saling bermaaf-maafan dan berbagi cerita seru tentang liburan mereka, sembari menikmati kebersamaan yang menyenangkan.
 
 Melalui kegiatan ini, anak-anak diajarkan tentang nilai-nilai persaudaraan, saling menghormati, dan menjaga hubungan baik sejak dini.
+
 
 #PAUDBaitunnaim  
 #KeceriaanAnak  
@@ -197,6 +205,7 @@ Setelah menikmati libur panjang Idul Fitri, para siswa dan guru kembali ke sekol
 Pada hari pertama masuk sekolah, Senin (14 April 2025), mereka mengadakan acara halal bihalal sebagai bentuk silaturahmi setelah liburan.
 
 Dengan kegiatan halal bihalal ini, MI Al Maarif Ngadri berharap agar para siswa bisa memulai kembali hari-hari mereka di sekolah dengan semangat baru.
+
 
 #MIAlMaarifNgadri  
 #HalalBihalal  
@@ -232,6 +241,7 @@ Keberhasilan ini tak lepas dari dukungan penuh pihak sekolah, guru, dan para sis
 
 Dengan prestasi ini, MI Almaarif Ngadri semakin mengukuhkan namanya sebagai sekolah yang berkompeten di bidang pengembangan potensi siswa. 
 
+
 #MIAlmaarifNgadri  
 #JuaraUmumPorseni  
 #PorseniBinangun2025  
@@ -241,7 +251,8 @@ Dengan prestasi ini, MI Almaarif Ngadri semakin mengukuhkan namanya sebagai seko
 #PendidikanBerkualitas  
 #SemangatPelajar  
 #PendidikanHebat  
-#KreativitasSiswa`,
+#KreativitasSiswa
+`,
     ringkasan: "MI Al Maarif Ngadri sukses meraih juara umum 2 di ajang Porseni Kecamatan Binangun 2025 dengan total 32 piala dari berbagai cabang lomba.",
     gambar: "/images/artikel/porseni.jpg",
     kategori: "Prestasi",

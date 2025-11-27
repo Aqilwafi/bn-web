@@ -21,7 +21,7 @@ const partners: Partner[] = [
 
 export default function Kerjasama() {
   return (
-    <section className="py-10 bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="container mx-auto text-center">
 
         {/* JUDUL */}

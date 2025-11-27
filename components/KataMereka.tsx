@@ -34,7 +34,7 @@ export default function KataMereka() {
 
   return (
     <section
-      className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden"
+      className="py-10 bg-gradient-to-b from-gray-50 to-white overflow-hidden"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >

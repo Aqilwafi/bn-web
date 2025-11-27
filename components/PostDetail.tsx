@@ -22,7 +22,7 @@ export default function PostDetail({ slug }: Props) {
       </nav>
 
       <h1 className="text-3xl font-bold mb-4">{post.judul}</h1>
-      <p className="text-gray-600 mb-6">{post.ringkasan}</p>
+      <p className="text-gray-600 mb-6 text-justifty">{post.ringkasan}</p>
 
       {post.gambar && (
         <img
@@ -32,8 +32,8 @@ export default function PostDetail({ slug }: Props) {
         />
       )}
 
-      <div className="prose prose-lg">
-        <ReactMarkdown>{post.konten_md}</ReactMarkdown>
+      <div className="prose prose-lg text-justify ">
+        <ReactMarkdown >{post.konten_md}</ReactMarkdown>
       </div>
     </div>
   );
