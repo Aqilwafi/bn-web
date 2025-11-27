@@ -1,44 +1,6 @@
 "use client"
 
-type Social = {
-  name: string
-  icon: string
-  link: string
-}
-
-const socials = [
-  {
-    name: "Instagram",
-    icon: "https://img.icons8.com/color/96/instagram-new.png",
-    link: "/",
-  },
-  {
-    name: "Facebook",
-    icon: "https://img.icons8.com/color/96/facebook-new.png",
-    link: "/",
-  },
-  {
-    name: "YouTube",
-    icon: "https://img.icons8.com/color/96/youtube-play.png",
-    link: "/",
-  },
-  {
-    name: "TikTok",
-    icon: "https://img.icons8.com/color/96/tiktok.png",
-    link: "/",
-  },
-  {
-    name: "Website",
-    icon: "https://img.icons8.com/color/96/domain.png",
-    link: "/",
-  },
-  {
-    name: "WhatsApp",
-    icon: "https://img.icons8.com/color/96/whatsapp--v1.png",
-    link: "/",
-  },
-]
-
+import { socials } from "@/const/sosmed"
 
 export default function SocialMedia() {
   return (

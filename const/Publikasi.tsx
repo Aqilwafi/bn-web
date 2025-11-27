@@ -257,6 +257,7 @@ Dengan prestasi ini, MI Almaarif Ngadri semakin mengukuhkan namanya sebagai seko
     gambar: "/images/artikel/porseni.jpg",
     kategori: "Prestasi",
     penulis: "Admin",
+    sector: "mi",
 
     waktu_baca: 2,
     jumlah_komentar: 0,

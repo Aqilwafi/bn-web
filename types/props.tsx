@@ -7,6 +7,7 @@ export interface BlogCardProps {
   gambar?: string;
   kategori?: string;
   penulis?: string;
+  sector?: string;
   waktu_baca: number;
   jumlah_komentar: number;
   unggulan: boolean;
