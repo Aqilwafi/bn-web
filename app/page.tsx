@@ -12,8 +12,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen text-black">
       <Navbar/>
-      <main className="flex-1 pt-29">
-        <Hero0 />
+      <main className="flex-1 pt-21">
         <Hero />
         <Hero2 />
         <Hero3 />

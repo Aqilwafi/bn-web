@@ -14,7 +14,7 @@ export default async function LembagaPage({ params }: Props) {
   return (
     <div className="flex flex-col min-h-screen text-black bg-white">
       <Navbar2 />
-      <main className="flex-1">
+      <main className="flex-1 pt-29">
         <Hero />  
       </main>
       <Footer />

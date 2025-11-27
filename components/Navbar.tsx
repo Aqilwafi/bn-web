@@ -3,77 +3,159 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ChevronDown } from "lucide-react";
+
+type LinkType = {
+  name: string;
+  href?: string;
+  isDropdown?: boolean;
+  external?: boolean;
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [lembagaOpen, setLembagaOpen] = useState(false);
 
-  const linkClass = "hover:text-teal-600 transition-colors duration-200 font-semibold";
+  const pathname = usePathname();
+
+  const links: LinkType[] = [
+    { name: "HOME", href: "/" },
+    { name: "LPI", href: "/lpi" },
+    { name: "lembaga", isDropdown: true },
+    { name: "PUBLIKASI", href: "/publikasi" },
+    { name: "HUBUNGI KAMI", href: "/contact" },
+    { name: "SPMB", href: "https://spmbbaitunnaim.com/", external: true },
+  ];
+
+  const lembagaLinks: LinkType[] = [
+    { name: "TPA", href: "/tpa" },
+    { name: "KB", href: "/kb" },
+    { name: "TK", href: "/tk" },
+    { name: "MI", href: "/mi" },
+  ];
+
+  const linkClass = "px-2 py-1 w-full text-left whitespace-nowrap transition"; // kotak & 1 baris
+
+  const isActive = (href?: string) => href && pathname === href;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md text-black border border-yellow-100 py-3 px-6">
-      <div className="container max-w-full mx-auto px-6 md:px-12 py-3 md:py-4 flex justify-between items-center">
-        
-        {/* === LOGO & TEXT === */}
-        <Link href="/" className="flex items-center gap-3">
+    <nav className="fixed top-0 w-full z-50 bg-white shadow-md text-black border border-yellow-100 p-4">
+      <div className="container max-w-full mx-auto flex justify-between items-center">
+        {/* Logo & text */}
+        <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
             src="/logo_lpi.png"
             alt="Logo"
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             className="object-contain"
           />
-          <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl leading-tight">
+          <span className="font-bold tracking-wide text-sm sm:text-base md:text-lg lg:text-xl leading-tight">
             Baitun Na'im Full Day School
           </span>
         </Link>
 
-        {/* === DESKTOP MENU === */}
-        <div className="hidden md:flex space-x-6 items-center text-md tracking-wide">
-          <Link href="/" className={linkClass}>Home</Link>
-          <Link href="/lpi" className={linkClass}>LPI</Link>
-          <Link href="/tpa" className={linkClass}>TPA</Link>
-          <Link href="/kb" className={linkClass}>KB</Link>
-          <Link href="/tk" className={linkClass}>TK</Link>
-          <Link href="/mi" className={linkClass}>MI</Link>
-          <Link href="/publikasi" className={linkClass}>Publikasi</Link>
-          <Link href="/contact" className={linkClass}>Hubungi Kami</Link>
-          <a
-            href="https://spmbbaitunnaim.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClass}
-          >
-            SPMB
-          </a>
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center space-x-1">
+          {links.map((link) =>
+            link.isDropdown ? (
+              <div
+                key="lembaga"
+                className="relative"
+                onMouseEnter={() => setLembagaOpen(true)}
+                onMouseLeave={() => setLembagaOpen(false)}
+              >
+                <button
+                  className={`flex items-center gap-1 px-2 py-1 cursor-pointer ${
+                    lembagaLinks.some((l) => pathname === l.href)
+                      ? "bg-teal-800 text-white"
+                      : "hover:bg-teal-100"
+                  }`}
+                >
+                  LEMBAGA <ChevronDown size={14} />
+                </button>
+
+                {lembagaOpen && (
+                  <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-md mt-1 z-50 w-36">
+                    {lembagaLinks.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href!}
+                        className={`block px-2 py-1 hover:bg-teal-100 ${
+                          isActive(item.href) ? "bg-teal-800 text-white" : ""
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : link.external ? (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-2 py-1 ${
+                  isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                } whitespace-nowrap`}
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href!}
+                className={`px-2 py-1 ${
+                  isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                } whitespace-nowrap`}
+              >
+                {link.name}
+              </Link>
+            )
+          )}
         </div>
 
-        {/* === MOBILE MENU TOGGLE === */}
-        <button onClick={() => setOpen(!open)} className="md:hidden">
+        {/* Mobile toggle */}
+        <button onClick={() => setOpen(!open)} className="md:hidden cursor-pointer">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* === MOBILE MENU === */}
+      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden px-6 py-4 space-y-3 transition-all duration-300 bg-white text-black shadow-md">
-          <Link href="/" onClick={() => setOpen(false)} className={linkClass + " block"}>Home</Link>
-          <Link href="/lpi" onClick={() => setOpen(false)} className={linkClass + " block"}>LPI</Link>
-          <Link href="/tpa" onClick={() => setOpen(false)} className={linkClass + " block"}>TPA</Link>
-          <Link href="/kb" onClick={() => setOpen(false)} className={linkClass + " block"}>KB</Link>
-          <Link href="/tk" onClick={() => setOpen(false)} className={linkClass + " block"}>TK</Link>
-          <Link href="/mi" onClick={() => setOpen(false)} className={linkClass + " block"}>MI</Link>
-          <Link href="/publikasi" onClick={() => setOpen(false)} className={linkClass + " block"}>Publikasi</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className={linkClass + " block"}>Hubungi Kami</Link>
-          <a
-            href="https://spmbbaitunnaim.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={linkClass + " block"}
-            onClick={() => setOpen(false)}
-          >
-            SPMB
-          </a>
+        <div className="md:hidden px-4 py-3 space-y-1 bg-white shadow-md">
+          {[...links, ...lembagaLinks]
+            .filter((link) => !link.isDropdown)
+            .map((link) =>
+              link.external ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block px-2 py-1 ${
+                    isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                  } whitespace-nowrap`}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href!}
+                  className={`block px-2 py-1 ${
+                    isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                  } whitespace-nowrap`}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
         </div>
       )}
     </nav>
