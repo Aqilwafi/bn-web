@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Hero0 from '@/components/Hero0';
 import Hero2 from '@/components/Hero2';
 import Hero3 from '@/components/Hero3';
 import KataMereka from '@/components/KataMereka';

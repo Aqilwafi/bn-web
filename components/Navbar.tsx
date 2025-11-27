@@ -17,7 +17,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [lembagaOpen, setLembagaOpen] = useState(false);
 
-  const pathname = usePathname();
+ const pathname = usePathname() || "/";
 
   const links: LinkType[] = [
     { name: "HOME", href: "/" },
