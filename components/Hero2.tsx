@@ -10,10 +10,10 @@ export default function Hero2() {
         <h2 className="text-2xl md:text-5xl font-bold text-teal-800 mb-4">
           Welcome to
         </h2>
-        <h2 className="text-2xl md:text-4xl font-bold text-teal-800 mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold text-teal-800 mb-1">
           <strong>BAITUN NA'IM ISLAMIC FULL DAY SCHOOL</strong>
         </h2>
-        <h3 className="text-xl md:text-xl font-medium text-gray-400 mb-4">
+        <h3 className="text-md md:text-xl font-medium text-gray-400 mb-4">
           Sekolah Hebat untuk Semua dan Setiap Anak
         </h3>
         
