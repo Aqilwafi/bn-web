@@ -118,8 +118,11 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="md:hidden cursor-pointer">
+        {/* Mobile toggle: selalu ada */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden flex items-center justify-center cursor-pointer"
+        >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
