@@ -24,9 +24,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-
 export const metadata: Metadata = {
-  title: "Baitun Na'im Islamic Full Day School di Blitar ",
+  title: "Baitun Na'im Islamic Full Day School di Blitar",
   description:
     "Baitun Na'im - Sekolah Islam Full Day School Terbaik di Blitar. Lembaga pendidikan Islam terbaik di Binangun dengan program full day school berstandar modern.",
   icons: {
@@ -71,6 +70,12 @@ export default function RootLayout({
               name: "Baitun Na'im Islamic Full Day School",
               url: "https://www.baitunnaim.com",
               logo: "https://www.baitunnaim.com/logo_lpi.png",
+              image: "https://www.baitunnaim.com/logo_lpi.png",
+              brand: {
+                "@type": "Brand",
+                name: "Baitun Na'im",
+                logo: "https://www.baitunnaim.com/logo_lpi.png",
+              },
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Binangun",
@@ -87,7 +92,9 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} ${poppins.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} ${poppins.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
