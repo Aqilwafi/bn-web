@@ -10,8 +10,8 @@ import Footer from '@/components/Footer';
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen text-black">
-      <Navbar/>
-      <main className="flex-1 pt-21">
+      <Navbar transparent={true}/>
+      <main className="flex-1 pt-11 bg-teal-900">
         <Hero />
         <Hero2 />
         <Hero3 />

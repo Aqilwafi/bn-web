@@ -1,48 +1,46 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { links, lembagaLinks } from "@/const/links";
 
-type LinkType = {
-  name: string;
-  href?: string;
-  isDropdown?: boolean;
-  external?: boolean;
-};
-
-export default function Navbar() {
+export default function Navbar({ transparent = false }) {
   const [open, setOpen] = useState(false);
   const [lembagaOpen, setLembagaOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
- const pathname = usePathname() || "/";
-
-  const links: LinkType[] = [
-    { name: "HOME", href: "/" },
-    { name: "LPI", href: "/lpi" },
-    { name: "lembaga", isDropdown: true },
-    { name: "PUBLIKASI", href: "/publikasi" },
-    { name: "HUBUNGI KAMI", href: "/contact" },
-    { name: "SPMB", href: "https://spmbbaitunnaim.com/", external: true },
-  ];
-
-  const lembagaLinks: LinkType[] = [
-    { name: "TPA", href: "/tpa" },
-    { name: "KB", href: "/kb" },
-    { name: "TK", href: "/tk" },
-    { name: "MI", href: "/mi" },
-  ];
-
-  const linkClass = "px-2 py-1 w-full text-left whitespace-nowrap transition"; // kotak & 1 baris
-
+  const pathname = usePathname() || "/";
   const isActive = (href?: string) => href && pathname === href;
 
+  // === SCROLL LISTENER ===
+  useEffect(() => {
+    if (!transparent) return;
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [transparent]);
+
+  // === STYLE DINAMIS ===
+  const activeStyle = transparent
+    ? scrolled
+      ? "bg-white shadow-md text-black"
+      : "bg-transparent text-white"
+    : "bg-white shadow-md text-black";
+
+  const dropdownBg = transparent && !scrolled ? "bg-white/90 text-black" : "bg-white text-black";
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white shadow-md text-black border border-yellow-100 p-4">
-      <div className="container max-w-full mx-auto flex justify-between items-center">
-        {/* Logo & text */}
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${activeStyle}`}>
+      <div className="container max-w-full mx-auto flex justify-between items-center p-4">
+
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
             src="/logo_lpi.png"
@@ -51,7 +49,11 @@ export default function Navbar() {
             height={50}
             className="object-contain"
           />
-          <span className="font-bold tracking-wide text-base sm:text-lg md:text-xl text-teal-800">
+          <span
+            className={`font-bold tracking-wide text-base sm:text-lg md:text-xl ${
+              transparent && !scrolled ? "text-white" : "text-teal-800"
+            }`}
+          >
             Baitun Na'im Full Day School
           </span>
         </Link>
@@ -70,14 +72,18 @@ export default function Navbar() {
                   className={`flex items-center gap-1 px-2 py-1 cursor-pointer ${
                     lembagaLinks.some((l) => pathname === l.href)
                       ? "bg-teal-800 text-white"
-                      : "hover:bg-teal-100"
+                      : transparent && !scrolled
+                      ? "text-white hover:bg-white/20"
+                      : "hover:bg-teal-100 text-black"
                   }`}
                 >
                   LEMBAGA <ChevronDown size={14} />
                 </button>
 
                 {lembagaOpen && (
-                  <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-md mt-1 z-50 w-36">
+                  <div
+                    className={`absolute top-full left-0 border border-gray-200 shadow-md mt-1 z-50 w-36 ${dropdownBg}`}
+                  >
                     {lembagaLinks.map((item) => (
                       <Link
                         key={item.name}
@@ -99,7 +105,11 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`px-2 py-1 ${
-                  isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                  isActive(link.href)
+                    ? "bg-teal-800 text-white"
+                    : transparent && !scrolled
+                    ? "text-white hover:bg-white/20"
+                    : "hover:bg-teal-100 text-black"
                 } whitespace-nowrap`}
               >
                 {link.name}
@@ -109,7 +119,11 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href!}
                 className={`px-2 py-1 ${
-                  isActive(link.href) ? "bg-teal-800 text-white" : "hover:bg-teal-100"
+                  isActive(link.href)
+                    ? "bg-teal-800 text-white"
+                    : transparent && !scrolled
+                    ? "text-white hover:bg-white/20"
+                    : "hover:bg-teal-100 text-black"
                 } whitespace-nowrap`}
               >
                 {link.name}
@@ -118,7 +132,7 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* Mobile toggle: selalu ada */}
+        {/* Mobile button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex items-center justify-center cursor-pointer"
@@ -129,7 +143,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden px-4 py-3 space-y-1 bg-white shadow-md">
+        <div
+          className={`md:hidden px-4 py-3 space-y-1 transition-all duration-300 ${
+            scrolled || !transparent
+              ? "bg-white text-black shadow-md"
+              : "bg-black/70 text-white backdrop-blur-sm"
+          }`}
+        >
           {[...links, ...lembagaLinks]
             .filter((link) => !link.isDropdown)
             .map((link) =>

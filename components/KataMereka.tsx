@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { testimonials,Testimonial } from "@/const/Testimonials"
+import { testimonials,Testimonial } from "@/const/testimonial"
 
 const slideVariants = {
   enter: (direction: number) => ({

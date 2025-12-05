@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Quicksand, Poppins } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,13 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ================================
-//       SEO GLOBAL METADATA
-// ================================
+const quicksand = Quicksand({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-quicksand",
+});
+
+const poppins = Poppins({
+  weight: ["400", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
+
+
 export const metadata: Metadata = {
-  title: "Baitun Na'im - Sekolah Islam Full Day School Terbaik di Blitar",
+  title: "Baitun Na'im Islamic Full Day School di Blitar ",
   description:
-    "Baitun Na'im Islamic Full Day School di Blitar. Lembaga pendidikan Islam terbaik di Binangun dengan program full day school berstandar modern.",
+    "Baitun Na'im - Sekolah Islam Full Day School Terbaik di Blitar. Lembaga pendidikan Islam terbaik di Binangun dengan program full day school berstandar modern.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
@@ -77,7 +87,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>

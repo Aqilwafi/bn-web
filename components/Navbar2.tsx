@@ -4,23 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { sublinks } from "@/const/links";
 
 export default function Navbar2() {
   const [active, setActive] = useState("Berita");
   const [open, setOpen] = useState(false);
-
-  const links = [
-    "Berita",
-    "Agenda",
-    "Prestasi",
-    "Profil Lulusan",
-    "Kurikulum",
-    "Kesiswaan",
-    "Fasilitas",
-    "SDM",
-    "Tulisan Inspirasi",
-    "School Tour",
-  ];
 
   const linkClass = "px-3 py-1 rounded-full transition";
 
@@ -43,7 +31,7 @@ export default function Navbar2() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex text-teal-800 font-medium space-x-2">
-          {links.map((link) => (
+          {sublinks.map((link) => (
             <button
               key={link}
               onClick={() => setActive(link)}
@@ -65,7 +53,7 @@ export default function Navbar2() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-white text-teal-800 border-t border-yellow-100 px-6 py-4 space-y-2 shadow-md">
-          {links.map((link) => (
+          {sublinks.map((link) => (
             <button
               key={link}
               onClick={() => {
