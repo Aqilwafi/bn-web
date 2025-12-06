@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen text-black">
       <Navbar transparent={true}/>
-      <main className="flex-1 pt-11 bg-teal-900">
-        <Hero />
+      <main className="flex-1">
+        <Hero />      
         <Hero2 />
         <Hero3 />
         <KataMereka />
