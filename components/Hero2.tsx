@@ -24,7 +24,7 @@ export default function Hero2() {
         >
           <div>
             <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
-              Profil Yayasan LPI Baitunnaim
+              Profil LPI Baitun Na'im
             </h1>
 
             <p className="text-gray-700 leading-relaxed text-justify mb-4">
