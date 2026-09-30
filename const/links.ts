@@ -11,7 +11,7 @@ export const links: LinkType[] = [
     { name: "lembaga", isDropdown: true },
     { name: "PUBLIKASI", href: "/publikasi" },
     { name: "HUBUNGI KAMI", href: "/contact" },
-    { name: "SPMB", href: "https://spmbbaitunnaim.com/", external: true },
+    { name: "SPMB", href: "https://spmb.baitunnaim.com/", external: true },
 ];
 
 export const lembagaLinks: LinkType[] = [

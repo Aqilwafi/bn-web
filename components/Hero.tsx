@@ -2,6 +2,7 @@
 
 import { heroimages } from "@/const/hero";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,23 +26,31 @@ export default function Hero() {
           <div
             key={i}
             className={[
-              "absolute inset-0 w-full h-full bg-cover bg-center",
+              "absolute inset-0 w-full h-full",
               "transition-opacity duration-[1200ms]",
-              i === currentIndex ? "opacity-100" : "opacity-0",
+              i === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0",
             ].join(" ")}
-            style={{ backgroundImage: `url(${img})` }}
-          />
+          >
+            <Image
+              src={img}
+              alt={`Hero Image ${i + 1}`}
+              fill
+              priority={i === 0} // Prioritaskan load gambar pertama agar LCP cepat
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </div>
         ))}
       </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay (Pastikan z-index di atas gambar) */}
+      <div className="absolute inset-0 bg-black/40 z-20 pointer-events-none" />
 
       {/* CTA Button */}
-      <div className="absolute inset-0">
-        <div className="absolute right-3 bottom-3 sm:right-6 sm:bottom-10 lg:right-6 lg:bottom-6">
+      <div className="absolute inset-0 z-30 pointer-events-none">
+        <div className="absolute right-3 bottom-3 sm:right-6 sm:bottom-10 lg:right-6 lg:bottom-6 pointer-events-auto">
           <a
-            href="https://spmbbaitunnaim.com/"
+            href="https://spmb.baitunnaim.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="
